@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { SectionMotion } from "./SectionMotion";
 import { motion } from "framer-motion";
+import { Star } from "lucide-react";
 import TextReveal from "./TextReveal";
 
 const container = {
@@ -21,18 +22,21 @@ const item = {
 const testimonials = [
   {
     name: "Emily R.",
+    rating: 5,
     feedback:
       "Absolutely the best car wash in Chicago! The crew was fast, friendly, and my car looked brand new afterward.",
   },
   {
     name: "Carlos M.",
+    rating: 4,
     feedback:
       "Been coming here for years. They always go the extra mile with detailing. Worth every penny.",
   },
   {
     name: "Sophia L.",
+    rating: 5,
     feedback:
-      "Super professional staff and amazing results. Highly recommend Logan Square Car Wash!",
+      "Super professional staff and amazing results. Highly recommend D&M Car Wash!",
   },
 ];
 
@@ -43,7 +47,7 @@ export default function Testimonials() {
         <div className="max-w-6xl mx-auto text-center space-y-6">
           <TextReveal>
             <p className="text-sm text-gray-500 uppercase tracking-wide">
-              Real feedback from our Logan Square family
+              Real feedback from our D&M Car Wash family
             </p>
           </TextReveal>
           <TextReveal delay={0.1}>
@@ -52,7 +56,6 @@ export default function Testimonials() {
             </h2>
           </TextReveal>
 
-          {/* Apply container motion to grid */}
           <motion.div
             className="grid gap-6 md:grid-cols-3"
             variants={container}
@@ -64,7 +67,14 @@ export default function Testimonials() {
               <motion.div key={index} variants={item}>
                 <Card className="rounded-2xl shadow-md h-full">
                   <CardContent className="p-6 text-left flex flex-col justify-between h-full">
-                    <p className="text-gray-700 mb-4">"{t.feedback}"</p>
+                    <div className="mb-4">
+                      <div className="flex space-x-1 mb-2">
+                        {[...Array(t.rating)].map((_, i) => (
+                          <Star key={i} className="w-5 h-5 text-yellow-400" />
+                        ))}
+                      </div>
+                      <p className="text-gray-700">"{t.feedback}"</p>
+                    </div>
                     <p className="text-sm text-gray-500 font-semibold">
                       – {t.name}
                     </p>

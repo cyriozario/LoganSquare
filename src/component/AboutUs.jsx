@@ -1,5 +1,5 @@
 import React from "react";
-import teamPhoto from "../../public/images/logansquare.webp";
+import vector from "../../public/images/vector.jpg";
 import { GiCheckMark } from "react-icons/gi";
 import { SectionMotion } from "./SectionMotion";
 import TextReveal from "./TextReveal";
@@ -24,42 +24,28 @@ export default function AboutUs() {
 
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12">
           {/* Left: Image */}
-          <div className="bg-white p-4 rounded-2xl shadow-md w-full flex-1">
+          <div className="w-full flex-1">
             <img
-              src={teamPhoto}
-              alt="Our Logan Square Crew"
-              className="rounded-lg filter grayscale object-cover w-full"
+              src={vector}
+              alt="Our D&M Mobile Van"
+              className="rounded-lg object-cover w-full"
             />
           </div>
 
           {/* Right: Text */}
-          <div className="flex-1 space-y-6 md:pt-2">
-            <p className="text-lg text-gray-700">
-              Chicago’s best vehicle detailing services and car washes, over 28
-              years in business. Stop by for a wash from our Logan Square Crew
-              to see what we are all about.
+          <div className="flex-1 space-y-6 md:pt-2 text-gray-700">
+            <p className="text-lg">
+              D&M Car Wash and Detail Center was founded in 2020 by Torrey
+              Harper and Jawann Fondren. These two gentlemen worked together at
+              a diesel mechanic shop, and during that time, they lost their
+              mother and grandmother within six months of each other. Soon after
+              their passings, Torrey and Jawann decided to go into business
+              together. First, they built a mobile detailing van and started a
+              mobile detailing service. That detailing service has grown into
+              the brick and mortar you see today. To honor the important women
+              they lost, they named the business after Torrey’s grandmother,
+              Doris, and Jawann‘s mother, Michelle.
             </p>
-
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <GiCheckMark className="mt-1 mr-3 text-blue-600" />
-                <span>Over 28 years of hand‑crafted detailing expertise.</span>
-              </li>
-              <li className="flex items-start">
-                <GiCheckMark className="mt-1 mr-3 text-blue-600" />
-                <span>Eco‑friendly soaps & meticulous crew practices.</span>
-              </li>
-              <li className="flex items-start">
-                <GiCheckMark className="mt-1 mr-3 text-blue-600" />
-                <span>
-                  Trained professionals delivering world‑class service.
-                </span>
-              </li>
-              <li className="flex items-start">
-                <GiCheckMark className="mt-1 mr-3 text-blue-600" />
-                <span>Experience the difference at Logan Square Car Wash.</span>
-              </li>
-            </ul>
           </div>
         </div>
       </section>

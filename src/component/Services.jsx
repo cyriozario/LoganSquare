@@ -25,38 +25,38 @@ const services = [
     description:
       "Gentle hand wash, rinse, and dry to give your car a spotless finish.",
     price: "$25",
-    icon: <Car className="h-6 w-6 text-blue-600" />,
+    icon: <Car className="h-6 w-6 text-green-600" />,
   },
   {
     title: "Interior Detailing",
     description: "Thorough interior vacuum, wipe-down, and window cleaning.",
     price: "$40",
-    icon: <Sparkles className="h-6 w-6 text-blue-600" />,
+    icon: <Sparkles className="h-6 w-6 text-green-600" />,
   },
   {
     title: "Full Premium Package",
     description: "Includes full wash, wax, interior clean, and tire shine.",
     price: "$80",
-    icon: <Droplets className="h-6 w-6 text-blue-600" />,
+    icon: <Droplets className="h-6 w-6 text-green-600" />,
   },
   {
     title: "Mini Detailing",
     description: "Exterior wash + light vacuum and dash wipe.",
     price: "$45",
-    icon: <Sparkles className="h-6 w-6 text-blue-600" />,
+    icon: <Sparkles className="h-6 w-6 text-green-600" />,
   },
   {
     title: "Tire Shine & Wax",
     description: "High gloss finish and protective wax for a showroom look.",
     price: "$30",
-    icon: <Droplets className="h-6 w-6 text-blue-600" />,
+    icon: <Droplets className="h-6 w-6 text-green-600" />,
   },
 ];
 
 export default function Services() {
   return (
     <SectionMotion>
-      <section className="w-full px-4 md:px-8 py-16 bg-gray-50">
+      <section className="w-full px-4 md:px-8 py-16 bg-slate-50">
         <div className="max-w-6xl mx-auto text-center space-y-6">
           <TextReveal>
             <p className="text-sm text-gray-500 uppercase tracking-wide">
@@ -75,7 +75,6 @@ export default function Services() {
             </p>
           </TextReveal>
 
-          {/* Animate the grid with staggered items */}
           <motion.div
             className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
             variants={container}
@@ -85,10 +84,12 @@ export default function Services() {
           >
             {services.map((service, index) => (
               <motion.div key={index} variants={item}>
-                <Card className="p-6 text-left hover:shadow-lg transition rounded-2xl h-full">
+                <Card className="p-6 shadow-md rounded-2xl h-full">
                   <CardHeader className="flex items-center space-x-3">
                     {service.icon}
-                    <CardTitle className="text-xl">{service.title}</CardTitle>
+                    <CardTitle className="text-xl text-gray-900">
+                      {service.title}
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-600 text-sm mb-3">

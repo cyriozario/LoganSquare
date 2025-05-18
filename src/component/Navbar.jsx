@@ -10,7 +10,7 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import logo from "../../public/images/logo.png";
+import logo from "../../public/images/d&m.webp";
 
 export default function Navbar() {
   const navLinks = [
@@ -22,11 +22,11 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full transparent backdrop-blur-md z-50">
-      <div className="flex items-center justify-between px-6 py-4">
+    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+      <div className="flex items-center justify-between px-6 py-8">
         {/* Logo */}
         <a href="/">
-          <img src={logo} alt="Logo" className="h-24" />
+          <img src={logo} alt="Logo" className="h-20" />
         </a>
 
         {/* Desktop nav: simple inline links */}

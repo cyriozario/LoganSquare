@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import heroImg from "../../public/images/hero.png";
+import heroImg from "../../public/images/hero_van.png";
 import { motion } from "framer-motion";
 
 // Small, minimal slide offsets
@@ -25,18 +25,21 @@ export default function Hero() {
         transition={{ duration: 0.5, ease: "easeOut" }} // no delay here
       >
         <h1 className="text-5xl md:text-6xl font-extrabold mb-4 text-gray-900">
-          Hand‑Crafted Shine, Every Time
+          Built on Family. Fueled by Quality
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-gray-600 max-w-lg">
-          Our <span className="text-blue-600 font-semibold">eco‑friendly</span>{" "}
-          soaps and meticulous crew bring your ride back to showroom condition.
+          From our mobile van to this detail center—
+          <span className="text-green-600 font-semibold">premium care</span>,
+          powered by heart.
         </p>
+
         <div className="flex flex-col sm:flex-row gap-4">
-          <Button size="lg" variant="blue">
-            Book Your Wash
+          <Button size="lg" className="bg-green-600 hover:bg-green-700">
+            Book Your Shine
           </Button>
+
           <Button variant="outline" size="lg">
-            View Pricing
+            View Our Services
           </Button>
         </div>
       </motion.div>

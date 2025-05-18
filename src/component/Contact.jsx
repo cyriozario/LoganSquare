@@ -62,7 +62,7 @@ export default function ContactUs() {
             <Button
               type="submit"
               variant="blue"
-              className="mt-4 w-full sm:w-auto"
+              className="bg-green-600 hover:bg-green-700 mt-4 w-full sm:w-auto"
             >
               Send Message
             </Button>
